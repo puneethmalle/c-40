@@ -81,7 +81,13 @@ class Game{
                     this.showRank();
                     
                 }
-                 
+                 if(player.rank>1){
+                    player.rank=0;
+                    Player.updatePlayerAtEnd(player.rank);
+                    player.update();
+                    
+
+                }
 
                 if (keyIsDown(RIGHT_ARROW) && player.index !== null) {
                     player.distance -= 10
